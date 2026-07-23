@@ -1,0 +1,147 @@
+.course-details {
+  padding: 60px;
+  background: #f8fbff;
+  min-height: 100vh;
+}
+
+/* Main layout */
+.course-main {
+  display: grid;
+  grid-template-columns: 38% 62%; /* left box narrow, right video wide */
+  gap: 30px;
+  align-items: start;
+}
+
+.course-info-card {
+  background: white;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  min-height: 500px; /* makes it vertically long */
+  display: flex;
+  align-items: flex-start;
+}
+
+.course-info {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 20px;
+}
+
+.course-category {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: rgba(37, 99, 235, 0.95);
+  color: #ffffff;
+  padding: 8px 14px;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.course-info h1 {
+  font-size: 36px;
+  font-weight: 700;
+  color: #111827;
+  margin: 16px 0;
+  line-height: 1.3;
+}
+
+.course-meta {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #4b5563;
+  flex-wrap: wrap;
+}
+
+.course-description {
+  font-size: 16px;
+  line-height: 1.8;
+  color: #4b5563;
+}
+
+/* Right side - Video section */
+.video-section {
+  background: white;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+}
+
+.video-section h2 {
+  margin-bottom: 20px;
+  color: #111827;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-top: 55%; /* increased height */
+  border-radius: 20px;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+  pointer-events: auto;
+  z-index: 1;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .course-main {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .course-details {
+    padding: 20px;
+  }
+
+  /* Stack info box and video vertically on mobile */
+  .course-main {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .course-info-card,
+  .video-section {
+    width: 100%;
+    min-height: auto;
+  }
+
+  .course-info {
+    padding: 24px;
+  }
+
+  .course-info h1 {
+    font-size: 30px;
+  }
+
+  .course-meta {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .video-section {
+    padding: 20px;
+  }
+
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
