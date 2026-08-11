@@ -3,6 +3,10 @@
     {
       "source": "/api/:path*",
       "destination": "https://e-learning-api-fc5y.onrender.com/api/:path*"
+    },
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
     }
   ]
 }
