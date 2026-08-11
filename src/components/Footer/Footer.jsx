@@ -65,11 +65,11 @@ function Footer() {
             </li>
 
             <li>
-              <Link to="/courses">Courses</Link>
+              <Link to="/#faq">FAQ</Link>
             </li>
 
             <li>
-              <Link to="/contact">Contact</Link>
+              <Link to="/#testimonials">Testimonials</Link>
             </li>
 
           </ul>
@@ -81,7 +81,7 @@ function Footer() {
 
   <ul>
     <li>Web Development</li>
-    <li>AI/ML</li>
+    <li>Artificial Intelligence</li>
     <li>Data Science</li>
     <li>UI/UX Design</li>
   </ul>

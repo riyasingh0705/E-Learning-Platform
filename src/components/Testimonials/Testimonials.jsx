@@ -26,6 +26,7 @@ function Testimonials() {
   return (
     <motion.section
       className="testimonials"
+      id="testimonials"
       initial={{ opacity: 0, y: 50 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8 }}
@@ -54,7 +55,7 @@ function Testimonials() {
 
             <div className="stars">★★★★★</div>
 
-            <p className="review">“{testimonial.review}”</p>
+            <p className="review">"{testimonial.review}"</p>
           </motion.div>
         ))}
       </div>

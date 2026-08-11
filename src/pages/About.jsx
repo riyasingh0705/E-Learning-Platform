@@ -34,28 +34,6 @@ function About() {
         </div>
       </section>
 
-      <section className="about-stats">
-        <div className="stat-card">
-          <h3>8+</h3>
-          <p>Professional Courses</p>
-        </div>
-
-        <div className="stat-card">
-          <h3>10k+</h3>
-          <p>Active Students</p>
-        </div>
-
-        <div className="stat-card">
-          <h3>95%</h3>
-          <p>Satisfaction Rate</p>
-        </div>
-
-        <div className="stat-card">
-          <h3>24/7</h3>
-          <p>Learning Support</p>
-        </div>
-      </section>
-
       <section className="why-choose">
   <h2>Why Choose EduVerse?</h2>
 

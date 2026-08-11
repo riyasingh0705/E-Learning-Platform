@@ -98,3 +98,42 @@
 .toggle-btn:hover {
   text-decoration: underline;
 }
+
+.auth-error {
+  color: #dc2626;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+.signin-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.password-input-wrapper {
+  position: relative;
+}
+
+.password-input-wrapper input {
+  width: 100%;
+  padding-right: 48px;
+}
+
+.password-toggle {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform: translateY(-50%);
+  border: none;
+  background: transparent;
+  color: #64748b;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.password-toggle:hover {
+  color: #2563eb;
+}

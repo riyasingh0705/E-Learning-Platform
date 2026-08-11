@@ -6,6 +6,10 @@ import cloudCourse from "../assets/images/cloud-course.jpg";
 import cyberCourse from "../assets/images/cyber-course.jpg";
 import mobileCourse from "../assets/images/mobile-course.jpg";
 import programmingCourse from "../assets/images/programming-course.jpg";
+import javaCourse from "../assets/images/javaCourse.jpg";
+import cprogrammingCourse from "../assets/images/cprogrammingCourse.jpg";
+import machineCourse from "../assets/images/machineCourse.jpg";
+import sqlCourse from "../assets/images/sqlCourse.jpg";
 
 const courses = [
   {
@@ -16,12 +20,12 @@ const courses = [
     duration: "12 Weeks",
     rating: 4.9,
     students: "2.5k",
-    video: "https://www.youtube.com/embed/zJSY8tbf_ys",
+    video: "https://www.youtube.com/embed/EceJQ05KTf4",
   },
   {
     id: 2,
     image: aiCourse,
-    category: "AI/ML",
+    category: "Artificial Intelligence",
     title: "Artificial Intelligence Fundamentals",
     duration: "10 Weeks",
     rating: 4.8,
@@ -42,7 +46,7 @@ const courses = [
     id: 4,
     image: uiuxCourse,
     category: "UI/UX Design",
-    title: "Complete UI/UX Design Bootcamp",
+    title: "Complete UI/UX Design with Figma",
     duration: "8 Weeks",
     rating: 4.7,
     students: "1.2k",
@@ -66,7 +70,7 @@ const courses = [
     duration: "9 Weeks",
     rating: 4.9,
     students: "1.5k",
-    video: "https://www.youtube.com/embed/3Kq1MIfTWCE",
+    video: "https://www.youtube.com/embed/ug8W0sFiVJo",
   },
   {
     id: 7,
@@ -82,12 +86,56 @@ const courses = [
   {
     id: 8,
     image: programmingCourse,
-    category: "Programming",
+    category: "Python",
     title: "Python Programming Essentials",
     duration: "10 Weeks",
     rating: 4.9,
     students: "2.3k",
-    video: "https://www.youtube.com/embed/_uQrJ0TkZlc",
+    video: "https://www.youtube.com/embed/rfscVS0vtbw",
+  },
+
+  {
+    id: 9,
+    image: javaCourse,
+    category: "Java",
+    title: "Java Programming Essentials",
+    duration: "12 Weeks",
+    rating: 4.7,
+    students: "2.5k",
+    video: "https://www.youtube.com/embed/A74TOX803D0",
+  },
+
+  {
+    id: 10,
+    image: cprogrammingCourse,
+    category: "C",
+    title: "C Programming for Beginners",
+    duration: "8 Weeks",
+    rating: 4.9,
+    students: "1.3k",
+    video: "https://www.youtube.com/embed/KJgsSFOSQv0",
+  },
+
+  {
+    id: 11,
+    image: machineCourse,
+    category: "Machine Learning",
+    title: "Machine Learning Fundamentals",
+    duration: "10 Weeks",
+    rating: 4.7,
+    students: "2.3k",
+    video: "https://www.youtube.com/embed/NWONeJKn6kc",
+  },
+
+  {
+    id: 12,
+    image: sqlCourse,
+    category: "SQL",
+    title: "SQL for Beginners",
+    duration: "12 Weeks",
+    rating: 4.8,
+    students: "1.4k",
+    video: "https://www.youtube.com/embed/HXV3zeQKqGY",
   },
 ];
 

@@ -7,7 +7,7 @@
 /* Main layout */
 .course-main {
   display: grid;
-  grid-template-columns: 38% 62%; /* left box narrow, right video wide */
+  grid-template-columns: 60% 40%; /* left box narrow, right video wide */
   gap: 30px;
   align-items: start;
 }
@@ -16,7 +16,7 @@
   background: white;
   border-radius: 24px;
   box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
-  min-height: 500px; /* makes it vertically long */
+  min-height: 400px; /* makes it vertically long */
   display: flex;
   align-items: flex-start;
 }
@@ -104,6 +104,83 @@
   .course-main {
     grid-template-columns: 1fr;
   }
+}
+
+.progress-actions {
+  margin-top: 24px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.enroll-btn,
+.start-learning-btn,
+.complete-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 14px;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.enroll-btn {
+  background: linear-gradient(135deg, #059669, #10b981);
+}
+
+.enroll-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(5, 150, 105, 0.3);
+}
+
+.start-learning-btn {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+}
+
+.start-learning-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(37, 99, 235, 0.3);
+}
+
+.complete-btn {
+  background: linear-gradient(135deg, #7c3aed, #a855f7);
+}
+
+.complete-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(124, 58, 237, 0.3);
+}
+
+.enroll-btn:disabled,
+.start-learning-btn:disabled,
+.complete-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.status-badge {
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.status-badge.enrolled {
+  background: #d1fae5;
+  color: #059669;
+}
+
+.status-badge.started {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+.status-badge.completed {
+  background: #d1fae5;
+  color: #047857;
 }
 
 @media (max-width: 768px) {

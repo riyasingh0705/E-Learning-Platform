@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 function Statistics() {
   const stats = [
-    { number: "8+", label: "Professional Courses" },
+    { number: "10+", label: "Professional Courses" },
     { number: "10k+", label: "Active Students" },
     { number: "95%", label: "Satisfaction Rate" },
     { number: "24/7", label: "Learning Support" },

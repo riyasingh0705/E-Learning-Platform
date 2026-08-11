@@ -1,9 +1,12 @@
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { ArrowRight } from "lucide-react";
 import "./FeaturedCourses.css";
 import courses from "../../data/courses";
 
 function FeaturedCourses() {
+  const displayedCourses = courses.slice(0, 4);
+
   return (
     <motion.section
       className="featured-courses"
@@ -20,7 +23,7 @@ function FeaturedCourses() {
       </div>
 
       <div className="courses-grid">
-        {courses.map((course, index) => (
+        {displayedCourses.map((course, index) => (
           <motion.div
             key={course.id}
             className="course-card"
@@ -47,11 +50,18 @@ function FeaturedCourses() {
               </div>
 
               <Link to={`/courses/${course.id}`} className="watch-btn">
-  Watch Course
-</Link>
+                Watch Course
+              </Link>
             </div>
           </motion.div>
         ))}
+      </div>
+
+      <div className="view-all-wrapper">
+        <Link to="/courses" className="view-all-circle" aria-label="View all courses">
+          <ArrowRight size={22} />
+        </Link>
+        <span className="view-all-label">View All Courses</span>
       </div>
     </motion.section>
   );

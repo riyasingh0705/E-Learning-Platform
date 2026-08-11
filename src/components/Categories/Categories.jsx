@@ -4,13 +4,17 @@ import "./Categories.css";
 function Categories() {
   const categories = [
     { title: "Web Development", courses: "12 Courses" },
-    { title: "AI/ML", courses: "8 Courses" },
-    { title: "Data Science", courses: "10 Courses" },
-    { title: "UI/UX Design", courses: "6 Courses" },
-    { title: "Cloud Computing", courses: "5 Courses" },
-    { title: "Cybersecurity", courses: "7 Courses" },
-    { title: "App Development", courses: "9 Courses" },
-    { title: "Programming", courses: "11 Courses" },
+    { title: "Artificial Intelligence", courses: "10 Courses" },
+    { title: "Data Science", courses: "14 Courses" },
+    { title: "UI/UX Design", courses: "8 Courses" },
+    { title: "Cloud Computing", courses: "6 Courses" },
+    { title: "Cybersecurity", courses: "9 Courses" },
+    { title: "App Development", courses: "11 Courses" },
+    { title: "Python", courses: "10 Courses" },
+    { title: "Java", courses: "12 Courses" },
+    { title: "C", courses: "8 Courses" },
+    { title: "Machine Learning", courses: "10 Courses" },
+    { title: "SQL", courses: "12 Courses" },
   ];
 
   return (

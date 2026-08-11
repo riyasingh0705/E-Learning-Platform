@@ -10,6 +10,8 @@ import CourseDetails from "./pages/CourseDetails";
 import Contact from "./pages/Contact";
 import SignIn from "./pages/SignIn";
 import ScrollToTop from "./components/ScrollToTop";
+import Profile from "./pages/Profile";
+import Progress from "./pages/Progress";
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
         <Route path="/courses/:id" element={<CourseDetails />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/signin" element={<SignIn />} />
+        <Route path="/profile" element={<Profile />} />
+        <Route path="/progress" element={<Progress />} />
       </Routes>
 
       <Footer />
