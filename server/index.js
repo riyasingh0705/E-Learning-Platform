@@ -5,6 +5,7 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import authRoutes from "./routes/authRoutes.js";
 import progressRoutes from "./routes/progressRoutes.js";
+import aiRoutes from "./routes/aiRoutes.js";
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -18,6 +19,7 @@ app.use(
 
 app.use(express.json());
 app.use(cookieParser());
+app.use("/api/ai", aiRoutes);
 
 app.get("/api/health", (req, res) => {
   res.json({ message: "Backend is running." });

@@ -28,33 +28,26 @@ function AIAssistant({ courseTitle }) {
     setLoading(true);
 
     try {
-      const apiKey = import.meta.env.VITE_GEMINI_API_KEY;
-      const response = await fetch(
-        `https://generativelanguage.googleapis.com/v1beta/models/gemini-3.5-flash:generateContent?key=${apiKey}`,
-        {
-          method: "POST",
-          headers: { "Content-Type": "application/json" },
-          body: JSON.stringify({
-            system_instruction: {
-              parts: [
-                {
-                  text: `You are a helpful, friendly learning assistant embedded in a compact chat widget on an e-learning course page about "${courseTitle}". Keep every response short and conversational — 2 to 4 sentences maximum, unless the user explicitly asks for a detailed explanation or a step-by-step list. Avoid long paragraphs. Get straight to the point.`,
-                },
-              ],
-            },
-            contents: [
-              {
-                parts: [{ text: input }],
-              },
-            ],
-          }),
-        }
-      );
+      const response = await fetch("/api/ai/chat", {
+  method: "POST",
+  headers: {
+    "Content-Type": "application/json",
+  },
+  body: JSON.stringify({
+    message: input,
+    courseTitle,
+  }),
+});
 
-      const data = await response.json();
-      const aiText =
-        data?.candidates?.[0]?.content?.parts?.[0]?.text ||
-        "Sorry, I couldn't generate a response. Please try again.";
+const data = await response.json();
+
+if (!response.ok) {
+  throw new Error(data?.message || "AI request failed.");
+}
+
+const aiText =
+  data?.response ||
+  "Sorry, I couldn't generate a response. Please try again.";
 
       setMessages((prev) => [...prev, { role: "assistant", text: aiText }]);
     } catch (error) {
