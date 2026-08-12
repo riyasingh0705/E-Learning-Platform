@@ -18,7 +18,7 @@ async function request(url, options = {}) {
 }
 
 export function getProgress() {
-  return request("/");
+  return request("");
 }
 
 export function getStats() {
